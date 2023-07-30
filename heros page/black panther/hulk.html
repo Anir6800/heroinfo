@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Full Page Card with Back Button</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        .card-container {
+            position: relative;
+            width: 80%;
+            height: 80%;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .photo {
+            width: 40%;
+            height: auto;
+            object-fit: cover;
+            float: right;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+        }
+
+        .card-description {
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Animation Background */
+        @keyframes animateBackground {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #000, #333, #000);
+            background-size: 200% 200%;
+            animation: animateBackground 10s linear infinite;
+            z-index: -1;
+        }
+
+        /* New Animation: Fade In */
+        .fade-in {
+            opacity: 0;
+            animation: fadeInAnimation 1s forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* New Animation: Slide In from Right */
+        .slide-in {
+            transform: translateX(100%);
+            animation: slideInAnimation 1s forwards;
+        }
+
+        @keyframes slideInAnimation {
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="content fade-in">
+            <h2 class="card-title">hulk</h2>
+            <p class="card-description slide-in">
+                <h3><b>Name:tony strak</b>  </h3>
+            </p>
+            <h3 class="card-description slide-in">Alias: hulk</h3>
+            <h3 class="card-description slide-in">Affiliation:Avenger (heroic affiliation)</h3>
+            <h3 class="card-description slide-in">Abilities:
+                Gamma Radiation Transformation,
+                Superhuman Strength,
+                Enhanced Durability,
+                Regeneration,
+                Superhuman Leaping,
+                Thunderclap,
+                Heightened Senses,
+                Unstoppable Rage,
+                Gamma Burst
+
+ </h3>
+            <a href="H:\hack thone\home page\dist\index.html" class="btn slide-in">Back to Home</a>
+        </div>
+        <img class="photo slide-in" src="H:\hack thone\home page\photos\hulk.jpeg" alt="Card Image">
+    </div>
+</body>
+</html>
