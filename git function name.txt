@@ -1,0 +1,14 @@
+git 
+reset 
+reset hard
+soft reaset
+stash
+stash pop
+rebase
+fetch
+diff
+apply
+config
+remote
+checkout 
+cheery-pick
